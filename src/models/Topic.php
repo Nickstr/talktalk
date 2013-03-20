@@ -1,19 +1,20 @@
-<?php
-    class Topic extends Eloquent
+<?php namespace Talktalk;
+
+    class Topic extends \Eloquent
     {
         public function __construct()
         {
-            $this->table = Config::get('talktalk::tables.topic');
+            $this->table = \Config::get('talktalk::tables.topics');
         }
 
         public function getMessagePaginator()
         {
-            return $this->hasMany('Message')->orderBy('created_at','ASC')->paginate( Config::get('talktalk::pagination.messages') );
+            return $this->hasMany('Talktalk\Message')->orderBy('created_at','ASC')->paginate( \Config::get('talktalk::pagination.messages') );
         }
 
         public function user()
         {
-            return $this->belongsTo('User');
+            return $this->belongsTo('Talktalk\User');
         }
 
         public function createdBy()
@@ -23,7 +24,7 @@
 
         public function messages()
         {
-            return $this->hasMany('message');
+            return $this->hasMany('Talktalk\message');
         }
 
         public function LastPage()

@@ -1,10 +1,15 @@
-<?php
-    class User extends Eloquent
+<?php namespace Talktalk;
+
+    class User extends \Eloquent
     {
+        public function __construct()
+        {
+            $this->table = \Config::get('talktalk::tables.users');
+        }
 
         public function statistics()
         {
-            return $this->hasOne('Statistic');
+            return $this->hasOne('Talktalk\Statistic');
         }
 
         public function increaseMessageCount()

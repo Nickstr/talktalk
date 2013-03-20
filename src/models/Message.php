@@ -1,6 +1,6 @@
-<?php
+<?php namespace Talktalk;
 
-    class Message extends Eloquent
+    class Message extends \Eloquent
     {
         use Presentable;
 
@@ -8,12 +8,12 @@
 
         public function __construct()
         {
-            $this->table = Config::get('talktalk::tables.messages');
+            $this->table = \Config::get('talktalk::tables.messages');
         }
 
         public function user()
         {
-            return $this->belongsTo('User');
+            return $this->belongsTo('Talktalk\User');
         }
 
         public function createdBy()

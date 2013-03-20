@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Nickstr\\Talktalk' => $baseDir . '/src/',
+    'Mockery' => $vendorDir . '/mockery/mockery/library/',
+    'Illuminate\\Support' => $vendorDir . '/illuminate/support/',
 );

@@ -12,9 +12,9 @@
 
 Route::group(array('prefix' => 'talktalk'), function()
 {
-    Route::get('/', 'ForumsController@index');
-    Route::get('category/{catId}', 'CategoriesController@index');
-    Route::get('category/{catId}/topic/{topicId}', 'TopicsController@index');
+    Route::get('/', 'Talktalk\ForumsController@index');
+    Route::get('category/{catId}', 'Talktalk\CategoriesController@index');
+    Route::get('category/{catId}/topic/{topicId}', 'Talktalk\TopicsController@index');
 
-    Route::post('messages/new', 'MessagesController@store');
+    Route::post('messages/new', 'Talktalk\MessagesController@store');
 });

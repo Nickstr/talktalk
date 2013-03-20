@@ -9,7 +9,7 @@
     </thead>
         @foreach($category->subCategories as $subCategory)
         <tr>
-            <td><a href="{{ URL::action('CategoriesController@index', $subCategory->id) }}">{{ $subCategory->title }}</a></td>
+            <td><a href="{{ URL::action('Talktalk\CategoriesController@index', $subCategory->id) }}">{{ $subCategory->title }}</a></td>
             <td width="75" align="center">{{ $subCategory->topic_count }}</td>
             <td width="75" align="center">{{ $subCategory->post_count }}</td>
         </tr>

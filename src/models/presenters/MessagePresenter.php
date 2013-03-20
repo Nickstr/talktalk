@@ -1,4 +1,4 @@
-<?php
+<?php namespace Talktalk;
 
     class MessagePresenter
     {

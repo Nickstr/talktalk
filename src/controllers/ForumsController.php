@@ -1,6 +1,6 @@
-<?php
+<?php namespace Talktalk;
 
-class ForumsController extends BaseController {
+class ForumsController extends \Talktalk\BaseController {
 
     public function __construct()
     {
@@ -9,6 +9,6 @@ class ForumsController extends BaseController {
 
     public function index()
     {
-        return View::make('talktalk::forum.index')->with('categories', $this->category->mainCategories());
+        return \View::make('talktalk::forum.index')->with('categories', $this->category->mainCategories());
     }
 }

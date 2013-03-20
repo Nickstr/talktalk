@@ -12,6 +12,9 @@ return array(
     'messages' => 'messages',
 
     // Statistics table
-    'statistics' => 'statistics'
+    'statistics' => 'statistics',
+
+    // Users table
+    'users' => 'users'
   
 );

@@ -22,5 +22,8 @@
             "Nickstr\\Talktalk": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    }
 }

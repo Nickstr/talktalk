@@ -9,7 +9,7 @@
     </thead>
         @foreach($topics as $topic)
         <tr>
-            <td><a href="{{ URL::action('TopicsController@index', array($category->id, $topic->id)) }}">{{ $topic->title }}</a></td>
+            <td><a href="{{ URL::action('Talktalk\TopicsController@index', array($category->id, $topic->id)) }}">{{ $topic->title }}</a></td>
             <td width="75" align="center">{{ $topic->createdBy() }}</td>
             <td width="75" align="center">{{ $topic->post_count }}</td>
         </tr>

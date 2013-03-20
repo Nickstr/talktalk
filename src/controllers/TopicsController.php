@@ -1,6 +1,6 @@
-<?php
+<?php namespace Talktalk;
 
-class TopicsController extends BaseController {
+class TopicsController extends \Talktalk\BaseController {
 
     public function __construct()
     {
@@ -12,7 +12,7 @@ class TopicsController extends BaseController {
         $topic = Topic::find($topicId);
         $messages = $topic->getMessagePaginator();
 
-        return View::make('talktalk::topic.index')->with(compact('topic', 'messages'));
+        return \View::make('talktalk::topic.index')->with(compact('topic', 'messages'));
     }
   
 
