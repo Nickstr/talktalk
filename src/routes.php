@@ -10,6 +10,7 @@
 |
 */
 
+
 Route::group(array('prefix' => 'talktalk'), function()
 {
     Route::get('/', 'Talktalk\ForumsController@index');

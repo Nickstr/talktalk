@@ -1,5 +1,7 @@
 <?php namespace Talktalk;
 
+use Illuminate\Support\Facades\Config;
+
     class Message extends \Eloquent
     {
         use Presentable;
@@ -8,7 +10,7 @@
 
         public function __construct()
         {
-            $this->table = \Config::get('talktalk::tables.messages');
+            $this->table = Config::get('talktalk::tables.messages');
         }
 
         public function user()

@@ -1,10 +1,12 @@
 <?php namespace Talktalk;
 
+use Illuminate\Support\Facades\Config;
+
     class User extends \Eloquent
     {
         public function __construct()
         {
-            $this->table = \Config::get('talktalk::tables.users');
+            $this->table = Config::get('talktalk::tables.users');
         }
 
         public function statistics()

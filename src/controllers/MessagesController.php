@@ -1,5 +1,9 @@
 <?php namespace Talktalk;
 
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+
 class MessagesController extends \Talktalk\BaseController {
 
     public function __construct()
@@ -62,7 +66,7 @@ class MessagesController extends \Talktalk\BaseController {
         $topic = Topic::find($topicId);
         $messages = $topic->getMessagePaginator();
 
-        return \View::make('talktalk::topic.topic')->with(compact('topic', 'messages'));
+        return View::make('talktalk::topic.topic')->with(compact('topic', 'messages'));
     }
 
     /**

@@ -1,15 +1,18 @@
 <?php namespace Talktalk;
 
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\URL;
+
     class Topic extends \Eloquent
     {
         public function __construct()
         {
-            $this->table = \Config::get('talktalk::tables.topics');
+            $this->table = Config::get('talktalk::tables.topics');
         }
 
         public function getMessagePaginator()
         {
-            return $this->hasMany('Talktalk\Message')->orderBy('created_at','ASC')->paginate( \Config::get('talktalk::pagination.messages') );
+            return $this->hasMany('Talktalk\Message')->orderBy('created_at','ASC')->paginate( Config::get('talktalk::pagination.messages') );
         }
 
         public function user()
@@ -29,7 +32,7 @@
 
         public function LastPage()
         {
-            $url = URL::action('TopicsController@index', array( $this->category_id, $this->id));
+            $url = URL::action('Talktalk\TopicsController@index', array( $this->category_id, $this->id));
             return $url . $this->lastPaginatedPage();
         }
 

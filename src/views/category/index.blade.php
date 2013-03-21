@@ -16,3 +16,4 @@
         @endforeach
 </table>
 {{ $topics->links() }}
+
