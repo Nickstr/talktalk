@@ -9,6 +9,7 @@ class ForumsController extends \Talktalk\BaseController {
 
     public function index()
     {
-        return \View::make('talktalk::forum.index')->with('categories', $this->category->mainCategories());
+        $categories = $this->category->mainCategories()->get();
+        return \View::make('talktalk::forum.index')->with(compact('categories'));
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Mockery as m;
+use Talktalk\Message;
 
 class MessageModelTest extends PHPUnit_Framework_TestCase {
   
@@ -13,10 +14,10 @@ class MessageModelTest extends PHPUnit_Framework_TestCase {
         ];
 
         $messageData = array_merge($testInput, $customAttributes);
-        $message = new Message();
+        $message = new Message;
             $message->fill($messageData);
         $message->save();
-
+        
         $this->createdMessages[] = $message;
 
         return $message;
@@ -25,18 +26,15 @@ class MessageModelTest extends PHPUnit_Framework_TestCase {
 
     public function testMessageIsCreated()
     {
-        $this->assertEquals('default', $this->createMessage()->entry);
+        $message = $this->createMessage();
+        $this->assertEquals('default', $message->entry);
     }
 
-
-     public function tearDown() {
+    public function tearDown() {
 
         foreach ($this->createdMessages as $message) {
             $message->delete();
         }
-
-        \Mockery::close();
+        m::close();
     }
-
-
 }

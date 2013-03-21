@@ -7,9 +7,9 @@
             $this->table = \Config::get('talktalk::tables.categories');
         }
 
-        public function mainCategories()
+        public function scopeMainCategories($query)
         {
-            return $this->where('category_id', 0)->get();
+            return $query->where('category_id', '=', 0);
         }
 
         public function subCategories()
