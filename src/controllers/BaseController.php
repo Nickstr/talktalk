@@ -1,4 +1,4 @@
-<?php namespace Talktalk;
+<?php namespace Talktalk\Controllers;
 
 class BaseController extends \Controller {
 

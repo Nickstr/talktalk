@@ -55,12 +55,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "e01c03dfa2f12086c3bbd69e9ca19e4953c6c7d9"
+                "reference": "84b43613e4346d7892ee4375a30614edf1ad36c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/e01c03dfa2f12086c3bbd69e9ca19e4953c6c7d9",
-                "reference": "e01c03dfa2f12086c3bbd69e9ca19e4953c6c7d9",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/84b43613e4346d7892ee4375a30614edf1ad36c2",
+                "reference": "84b43613e4346d7892ee4375a30614edf1ad36c2",
                 "shasum": ""
             },
             "require": {
@@ -100,7 +100,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2013-03-19 17:42:50"
+            "time": "2013-03-22 12:04:50"
         }
     ],
     "aliases": [

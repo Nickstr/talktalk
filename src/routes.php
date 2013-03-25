@@ -1,19 +1,11 @@
-<?php 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
+<?php namespace Talktalk;
 
+use Talktalk\controllers;
+use Illuminate\Support\Facades\Route;
 
 Route::group(array('prefix' => 'talktalk'), function()
 {
-    Route::get('/', 'Talktalk\ForumsController@index');
+    Route::get('/', 'ForumsController@index');
     Route::get('category/{catId}', 'Talktalk\CategoriesController@index');
     Route::get('category/{catId}/topic/{topicId}', 'Talktalk\TopicsController@index');
 

@@ -1,4 +1,4 @@
-<?php namespace Talktalk;
+<?php namespace Talktalk\Controllers;
 
 use Illuminate\Support\Facades\View;
 

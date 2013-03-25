@@ -1,4 +1,4 @@
-<?php namespace Talktalk;
+<?php namespace Talktalk\Models\presenters;
 
 trait Presentable
 {

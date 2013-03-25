@@ -1,8 +1,9 @@
-<?php namespace Talktalk;
+<?php namespace Talktalk\Controllers;
 
 use Illuminate\Support\Facades\View;
+use Talktalk\Models;
 
-class ForumsController extends \Talktalk\BaseController {
+class ForumsController extends BaseController {
 
     public function __construct()
     {

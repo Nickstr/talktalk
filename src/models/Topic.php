@@ -1,4 +1,4 @@
-<?php namespace Talktalk;
+<?php namespace Talktalk\Models;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\URL;
