@@ -13,7 +13,8 @@ class CategoriesController extends \Talktalk\BaseController {
     {
         $category = Category::find($id);
         $topics = $category->getTopicPaginator();
+        $message = Message::find(1);
 
-        return View::make('talktalk::category.index')->with(compact('category', 'topics'));
+        return View::make('talktalk::category.index')->with(compact('category', 'topics', 'message'));
     }
 }
